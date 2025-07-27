@@ -1,6 +1,6 @@
 import React from "react";
 import "./login.css";
-import illustration from "../assets/illustration.png"; 
+import illustration from "../assets/illustration.svg"; 
 
 const Login: React.FC = () => {
   return (
@@ -9,6 +9,7 @@ const Login: React.FC = () => {
         <img src={illustration} alt="Illustration" />
       </div>
       <div className="right-side">
+        <div className="form_login">
         <h2>LOG IN</h2>
         <form className="login-form">
           <div className="input-group">
@@ -27,6 +28,7 @@ const Login: React.FC = () => {
           </div>
           <button type="submit">Log In</button>
         </form>
+      </div>
       </div>
     </div>
   );
