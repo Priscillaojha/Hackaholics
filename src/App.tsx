@@ -1,6 +1,6 @@
 import React from "react";
 import Login from "./components/login";
-import MedicalForm from "./components/MedicalReportForm";
+import MedicalForm from "./MedicalReportForm";
 
 const App: React.FC = () => {
   return (
