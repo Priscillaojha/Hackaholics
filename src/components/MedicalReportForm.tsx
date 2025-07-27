@@ -1,23 +1,31 @@
-
-// import React from "react";
+import React from "react";
 import "./MedicalReportForm.css";
 
-const MedicalReportForm = () => {
+const MedicalReportForm: React.FC = () => {
   return (
-    <div className="form-container">
-      <div className="header">
+    <div className="form-wrapper">
+      <div className="form-header">
+        <svg
+          className="wave"
+          viewBox="0 0 1440 320"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="#d6dcbe"
+            d="M0,96L80,112C160,128,320,160,480,165.3C640,171,800,149,960,133.3C1120,117,1280,107,1360,101.3L1440,96V0H1360C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0H0Z"
+          ></path>
+        </svg>
         <h1>Medical Report</h1>
-        <div className="wave"></div>
       </div>
 
-      <form className="form-content">
+      <form className="medical-form">
         <div className="form-row">
           <div className="form-group">
-            <label>Patient’s Full Name</label>
+            <label>First Name</label>
             <input type="text" placeholder="First Name" />
           </div>
           <div className="form-group">
-            <label>&nbsp;</label>
+            <label>Last Name</label>
             <input type="text" placeholder="Last Name" />
           </div>
         </div>
@@ -30,7 +38,7 @@ const MedicalReportForm = () => {
           <div className="form-group">
             <label>Gender</label>
             <select>
-              <option>Select</option>
+              <option value="">Select</option>
               <option>Male</option>
               <option>Female</option>
               <option>Other</option>
@@ -38,10 +46,8 @@ const MedicalReportForm = () => {
           </div>
         </div>
 
-        <div className="form-group full">
-          <label>Your Address</label>
-          <input type="text" placeholder="Current Address" />
-        </div>
+        <label>Your Address</label>
+        <input type="text" placeholder="Current Address" className="full-width" />
 
         <div className="form-row">
           <div className="form-group">
@@ -74,21 +80,15 @@ const MedicalReportForm = () => {
           </div>
         </div>
 
-        <div className="form-group full">
-          <label>Is the patient diagnosed with chronic disease?</label>
-          <input type="text" />
+        <label>Is the patient diagnosed with chronic disease?</label>
+        <input type="text" className="full-width" />
+
+        <label>If yes, please upload your diagnosed documents.</label>
+        <div className="upload-box">
+          <p>📄 Drop your files here, or <a href="#">click to browse</a></p>
         </div>
 
-        <div className="form-group full">
-          <label>If yes, please upload your diagnosed documents.</label>
-          <div className="upload-box">
-            <p>Drop your files here, or <span>click the browse</span></p>
-          </div>
-        </div>
-
-        <div className="form-group full text-right">
-          <button type="submit">Submit</button>
-        </div>
+        <button type="submit" className="submit-btn">Submit</button>
       </form>
     </div>
   );
